@@ -45,8 +45,13 @@ namespace extensions
         //set every local value of a transform to standard
         public static void resetLocal(this Transform transform)
         {
+            //sets local position to (0, 0, 0)
             transform.localPosition = Vector3.zero;
-            transform.localRotation = new Quaternion(0, 0, 0, 1);
+
+            //sets local rotation to (0, 0, 0, 1)
+            transform.localRotation = Quaternion.identity;
+
+            //sets local scale to (1, 1, 1)
             transform.localScale = new Vector3(1, 1, 1);
         }
 
